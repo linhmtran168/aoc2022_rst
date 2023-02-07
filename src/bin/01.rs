@@ -13,9 +13,9 @@ pub fn part_one(input: &str) -> Option<u32> {
 
 pub fn part_two(input: &str) -> Option<u32> {
     let group = input.split("\n\n");
-    let mut list_total: Vec<u32> = group.map(|g| {
-        g.lines().map(|l| l.parse::<u32>().unwrap()).sum::<u32>()
-    }).collect();
+    let mut list_total: Vec<u32> = group
+        .map(|g| g.lines().map(|l| l.parse::<u32>().unwrap()).sum::<u32>())
+        .collect();
     list_total.sort_by(|a, b| b.cmp(a));
     Some(list_total[..3].iter().sum())
 }

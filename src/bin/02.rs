@@ -1,5 +1,5 @@
 use itertools::Itertools;
-use std::{collections::HashMap};
+use std::collections::HashMap;
 
 #[derive(Eq, PartialEq, Hash, Debug)]
 enum Result {
